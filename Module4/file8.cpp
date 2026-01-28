@@ -6,9 +6,9 @@ int main(){
     cout<<"enter age:";
     cin>>age;
     isAdult=age>=18? true : false;
-    int a=10;
-    int b=5;
-    int largest = a>=b? a:b;
-    cout<<"largest is"<<largest<<endl;
+    int a=2;
+    float b=2.0;
+    float largest = a>=b? b:a;
+    cout<<"largest is:"<<largest<<endl;
     return 0;
 }
