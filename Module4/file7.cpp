@@ -8,7 +8,7 @@ int main(){
     cin>>b;
     cout<<"enter c:";
     cin>>c;
-    if(a>=b&&a>=c){
+    if(a>=b&&a>=c){//a=2,b=2
         cout<<"largest is a= "<<a<<endl;
     }else if(b>=c){
     cout<<"largest is b= "<<b<<endl;
