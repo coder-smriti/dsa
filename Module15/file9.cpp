@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 void toUpper(char word[],int n){
     for(int i=0; i<n; i++){
@@ -12,6 +12,7 @@ void toUpper(char word[],int n){
 }
 int main(){
     char word[]="ApPle";
+    int strlen;
     toUpper(word,strlen(word));
     cout<<word<<endl;
     return 0;
