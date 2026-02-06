@@ -2,7 +2,6 @@
 using namespace std;
 void func(){
     int *ptr = new int;
-    int ptr;
     *ptr = 1200;
     cout<< "ptr points to" <<*ptr<<endl;
     return ptr;
