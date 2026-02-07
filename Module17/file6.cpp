@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
 int main(){
-   cout<<(~10)<<endl;
-   return 0; 
+    cout<<(7>>2)<<endl;
+    return 0;
 }
