@@ -29,5 +29,8 @@ int main(){
     bird f1;
     fish f2;
     mammal f3;
+    cout<<<<endl;
+    cout<< fish f2<<endl;
+    cout<<mammal f3<<endl;
     return 0;
 }
