@@ -1,20 +1,30 @@
 #include<iostream>
 using namespace std;
-int i;
-void selectionSort(int arr[], int n){
-    for( i=0; i<n-1; i++){
-    int minIdx = i;
-    for(int j=i+1; j<n; j++){
-        if(arr[j]<arr[minIdx]){
-            minIdx=j;
-        }
+void spiralmatrix(int mat[][4], int n, int m){
+    int srow=0, scol=0;
+    int erow=n-1, ecol= m-1;
+    while(srow<=erow && scol<= ecol){
+    for(int j=scol; j<=ecol; j++){
+        cout<<mat[srow][j]<<" ";
     }
-    swap(arr[i],arr[minIdx]);  
+    for(int i=srow+1; i<=erow; i++){
+        cout << mat[i][ecol]<<" ";
+    }
+        for(int j=ecol-1; j>=scol; j--){
+            //if(srow==erow){break;}
+         cout<<mat[erow][j]<<" ";
 }
-   print(arr,n);
+    for(int i=erow-1; i>=srow+1; i--){
+                cout<<mat[i][scol]<<" ";
+    }
+    srow++; scol++;
+    erow--; ecol--;
 }
+cout<<endl;
+}
+
 int main(){
-    int arr[5]={5,4,1,3,2};
-    selectionSort(arr,5);
+int matrix[4][4]={{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+spiralmatrix( matrix,4,4);
     return 0;
 }

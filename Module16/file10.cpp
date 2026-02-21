@@ -1,17 +1,15 @@
 #include<iostream>
-#include<vector>
-using namespace std;//only possible in 2d vector not in 2d-array
-int main(){
-    vector<vector<int>> matrix={{1,2,3},{4,5},{7}};
-    for(int i=0; i<matrix.size(); i++){
-        for(int j=0; j<matrix[i].size(); j++){
-        cout<<matrix[i][j]<<" ";
+using namespace std;
+void OddOrEven(int num){
+    if(!(num & 1)){
+        cout<<"even"<<endl;
+    }else{
+        cout<<"odd"<<endl;
     }
-    cout<<endl;
 }
+int main(){
+    OddOrEven(5);
+    OddOrEven(6);
+    OddOrEven(8);
     return 0;
 }
-
-
-
-

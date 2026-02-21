@@ -1,15 +1,18 @@
-#include<iostream>
-using namespace std;
-int funfac(int n){
-    if(n==1 || n==0){
-        return 1;
-    }else{
-        return n*funfac(n-1);
-    }
-}
-    int main(){
-        int result;
-      result = funfac(4);
-      cout<<result<<endl;
-return 0;
-}
+ #include<iostream>
+ using namespace std;
+ int sum(int a,  int b){
+ int sum=a+b;
+ return sum;
+ }
+ int diff(int a,  int b){
+ int diff=a-b;
+ return diff;
+ }
+
+ int main(){
+   int s= sum(2,4);
+   int d= diff(6,-2);
+   cout<<"diff = "<<d<<endl;
+   cout<<"sum = "<<s<<endl;
+    return 0;
+ }

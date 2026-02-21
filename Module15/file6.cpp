@@ -1,7 +1,12 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 int main(){
-    char work[50]=" code ";//garbage cahar will be printed
-    cout<< strlen(work) << endl;
+   vector<int> vec = {1,2,3,4,5} ;
+   cout<< "size:"<<vec.size()<<endl;
+   cout<<"capacity:"<<vec.capacity()<<endl;
+   vec.push_back(6);
+   cout<<"size:"<<vec.size()<<endl;
+   cout<<"capacity:"<<vec.capacity()<<endl;
     return 0;
 }

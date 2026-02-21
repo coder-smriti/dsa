@@ -1,18 +1,31 @@
 #include<iostream>
+#include<string>
 using namespace std;
-class student {
-    string name;
-     public:
-    float cgpa;
-    void getpercentage(){
-        cout << (cgpa * 10) << "%\n";
+class complex{
+    int real;
+    int img;
+public:
+    complex(int r, int i){
+        real =r;
+        img =i;
+    }
+    void showNum(){
+        cout<<real<<"+"<<img<<"i\n";
+    }
+    complex operator + (complex &c2){
+        int resReal = this->real + c2.real;
+        int resImg = this->img + c2.img;
+        complex c3(resReal, resImg);
+        cout<<"res=";
+        return c3;
     }
 };
 int main(){
-    student s1;
-    //s1.name= "smriti";
-    s1.cgpa=9.0;
-    cout<<s1.cgpa<<endl;
-    s1.getpercentage();
+    complex c1(1,2);
+    complex c2(3,4);
+    c1.showNum();
+    c2.showNum();
+    complex c3=c1+c2;
+    c3.showNum();
     return 0;
 }

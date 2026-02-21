@@ -19,17 +19,5 @@ int main(){
     }else{
     cout<<"Invalid Operator.";
     }
-    //switch
-    switch(op){
-        case'+':cout<<"a+b="<<(a+b)<<endl;
-        break;
-        case'-':cout<<"a-b="<<(a-b)<<endl;
-        break;
-        case'*':cout<<"a*b="<<(a*b)<<endl;
-        break;
-        case'/':cout<<"a/b="<<(a/b)<<endl;
-        break;
-        default:cout<<"Invalid Operator";
-    }
-    return 0;
 }
+    

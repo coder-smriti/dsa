@@ -1,22 +1,21 @@
 #include<iostream>
 using namespace std;
-void printArr(int *arr,int n){
+int INT_MIN;
+void maxSubarraySum(int *arr, int n){
+    int maxSum = INT_MIN;
+    int currSum = 0;
     for(int i=0; i<n; i++){
-     cout<<arr[i];
-}
-    cout<<endl;
+        currSum += arr[i];
+        maxSum = max(currSum, maxSum);
+        if(currSum < 0){
+            currSum = 0;
+        }
+    }
+    cout<<"maximum subarray sum = "<< maxSum << endl;
 }
 int main(){
-    int arr[]={1,2,3,4,5};
-    int n= sizeof(arr)/sizeof(int);
-    int copyArr[n];
-    for(int i=0; i<=n; i++){
-        int j= n-i-1;
-        copyArr[i]=arr[j];
-    }
-    for(int i=0; i<n; i++){
-        arr[i]=copyArr[i];
-    }
-    printArr(arr,n);
+    int arr[6]= {-1,-2,-3,4,2};
+    int n = sizeof(arr)/sizeof(int);
+    maxSubarraySum(arr,n);
     return 0;
 }

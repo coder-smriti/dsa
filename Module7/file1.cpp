@@ -1,8 +1,9 @@
 #include<iostream>
 using namespace std;
- void sayHello(){
- cout<<"Hello\n";
- }
+void sayHello(){
+    cout<<"Hello:)\n";
+}
 int main(){
-   sayHello();
+    sayHello();
+    return 0;
 }

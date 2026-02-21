@@ -1,18 +1,15 @@
 #include<iostream>
+#include<vector>
 using namespace std;
-bool isPalindrone(char str[], int n){
-    int st = 0, end = n-1;
-    while(st<end){
-        if(str[st] != str[end] ){
-            cout<< "not valid palindrome\n";
-            return false;
+int main(){
+    vector<vector<int>> matrix = {{1,2,3},{4,5},{6}};
+    for(int i=0; i<matrix.size(); i++){
+        for(int j=0; j<matrix[i].size(); j++){
+            for(int j=0; j<matrix[i].size(); j++){
+                cout<<matrix[i][j]<<" ";
+            }
+            cout<<endl;
         }
     }
-    cout<<"valid palindrome\n";
-    return true;
-}
-int main(){
-    char word[]="rececar";
-    isPalindrome (word, strlen(word));
     return 0;
 }

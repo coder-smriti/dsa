@@ -1,16 +1,10 @@
 #include<iostream>
 using namespace std;
-bool isEven(int n){
-    if(n%2==0){
-        cout<<true;
-    }else{
-        cout<<false;
+void sayHello();
+ int main(){
+      sayHello() ;
+    return 0;
+}
+    void sayHello(){
+        cout<<"Hello:)\n";
     }
-}
-int main(){
-    int n;
-    cout<<"enter the n:";
-    cin>>n;
-    isEven(n);
-return 0;
-}

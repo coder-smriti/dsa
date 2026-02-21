@@ -1,11 +1,29 @@
 #include<iostream>
+#include<string>
 using namespace std;
-void updateithbit(int num, int i, int val){
-    num = num &(1<<i);
-    num = num | (val << i);
-    cout<< num << endl;
-}
+class Animal{
+    public:
+    string color;
+    void eat(){
+        cout<<"eats\n";
+    }
+    void breathe(){
+        cout<<"breaths\n";
+    }
+};
+class Fish: public Animal{
+    public:
+    int fins;
+    void swim(){
+        eat();
+      cout <<"swim\n";
+    }
+};
 int main(){
-    updateithbit(7,2,0);
-    return 0;
+Fish f1;
+f1.fins = 3;
+f1.swim();
+f1.breathe();
+f1.eat();
+return 0;
 }

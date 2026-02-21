@@ -1,16 +1,15 @@
 #include<iostream>
+#include<vector>
 using namespace std;
-void reverse(char word[], int n){
-    int st=0, end=n-1;
-    while(st<end){
-        swap(word[st],word[end]);
-        st++;
-        end--;
-    }
-}
 int main(){
-    char word[] = "code";
-    reverse(word,strlen(word));
-    cout<<"reverse="<<word<<endl;
+    vector <vector<int>> matrix ={{1,2,3},{4,5},{6}};
+    for(int i=0; i<matrix.size(); i++){
+        for(int j=0; j<matrix[i].size(); j++){
+            for(int j=0; j<matrix[i].size(); j++){
+                cout<<matrix[i][j]<<" ";
+            }
+            cout<<endl;
+        }
+    }
     return 0;
 }

@@ -1,17 +1,28 @@
 #include<iostream>
+#include<string>
 using namespace std;
-int getithbit(int num, int i){
-    int bitmask= 1 <<i;
-
-if((num | bitmask)){
-    return 0;
-}else{
-    return 1;
-}
-}
+class Animal{
+    public:
+    string color;
+    void eat(){
+        cout<<"eats\n";
+    }
+    void breathe(){
+        cout<<"breaths\n";
+    }
+};
+class Fish: public Animal{
+    public:
+    int fins;
+    void swim(){
+      cout <<"swim\n";
+    }
+};
 int main(){
-    cout<<getithbit(6,2)<<endl;
-    cout<<getithbit(7,2)<<endl;
-    return 0;
-
+Fish f1;
+f1.fins = 3;
+f1.swim();
+f1.breathe();
+f1.eat();
+return 0;
 }

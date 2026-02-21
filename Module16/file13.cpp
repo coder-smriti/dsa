@@ -1,12 +1,10 @@
 #include<iostream>
-#include<vector>
 using namespace std;
+int clearithbit(int num, int i){
+    int bitmask= ~(1<<i);
+    return num & bitmask;
+}
 int main(){
-    vector<int> vec;
-    for(int i=0; i<5; i++){//if size is 5 .capctity= 8,?;
-        vec.push_back(i);
-    }
-    cout<<vec.size()<<endl;
-    cout<<vec.capacity()<<endl;
+    cout<<clearithbit(6,1)<<endl;
     return 0;
 }

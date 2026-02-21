@@ -4,11 +4,11 @@ int main(){
     int num;
     cout<<"enter the num:";
     cin>>num;
-    if(num=num){
+    if(-1*num){
         cout<<"num is negative.";
-    }else if(num=num){
+    }else if(num){
         cout<<"num is positive.";
-    }else{
+    }else {
         cout<<"num is zero.";
     }
     return 0;

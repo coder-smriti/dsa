@@ -1,15 +1,18 @@
-#include<iostream>
+#include <iostream>
+#include <string>
 using namespace std;
-class student {
+class print {
     public:
-    string name;
-    float cgpa;
-    void getpercentage(){
-        cout << (cgpa * 100) << "%\n";
+    void show(int x){
+        cout<<"int:"<< x <<endl;
+    }
+    void show(string str){
+        cout<<"string:"<<str<<endl;
     }
 };
 int main(){
-    student s1;
-    cout<< sizeof(s1)<<endl;
+    print obj1;
+    obj1.show("Mahira");
+    obj1.show("winner");
     return 0;
 }

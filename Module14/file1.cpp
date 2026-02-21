@@ -1,7 +1,9 @@
 #include<iostream>
 using namespace std;
 int main(){
-int student[2][3]={{100,100,100},{75,80,85}};
-cout<<student[1][1]<<endl;
+    char ch='f';
+    int pos= ch-'a';
+    cout<<int(ch)<<endl;
+    cout<<pos<<endl;
     return 0;
 }

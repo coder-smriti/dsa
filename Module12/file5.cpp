@@ -1,21 +1,18 @@
 #include<iostream>
 using namespace std;
-int INT_MIN;
-void maxSubarraySum(int *arr, int n){
-    int maxSum = INT_MIN;
-    int currSum = 0;
-    for(int i=0; i<n; i++){
-        currSum += arr[i];
-        maxSum = max(currSum, maxSum);
-        if(currSum < 0){
-            currSum = 0;
+void insertionSort(int arr[], int n){
+    for(int i=1; i<n; i++){
+        int curr = arr[i];
+        int prev = i-1;
+        while(prev >= 0 && arr[prev]>curr){
+            swap(arr[prev],arr[prev+1]);
+            prev--;
         }
+        arr[prev+1]=curr;
     }
-    cout<<"maximum subarray sum = "<< maxSum << endl;
+        cout<<(arr,n);
 }
 int main(){
-    int arr[6]= {-1,-2,-3,4,2};
-    int n = sizeof(arr)/sizeof(int);
-    maxSubarraySum(arr,n);
+   int arr[5]={5,4,1,3,2};
     return 0;
 }

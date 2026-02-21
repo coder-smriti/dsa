@@ -1,10 +1,27 @@
 #include<iostream>
+#include<string>
 using namespace std;
-int clearithbit(int num, int i){
-    int bitmask= ~(1<<i);
-    return num & bitmask;
-}
+class Animal{
+    public:
+    string color;
+    void eat(){
+        cout<<"eats\n";
+    }
+    void breathe(){
+        cout<<"breaths\n";
+    }
+};
+class Fish: protected Animal{
+    public:
+    int fins;
+    void swim(){
+        eat();
+      cout <<"swim\n";
+    }
+};
 int main(){
-    cout<<clearithbit(6,1)<<endl;
-    return 0;
+Fish f1;
+f1.fins = 3;
+f1.swim();
+return 0;
 }

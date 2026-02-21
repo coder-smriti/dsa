@@ -1,16 +1,19 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-void maxProfit(int *prices, int n){
-    int bestbuy[100000];
-    bestbuy[0]=INT_MAX;
-    for( int i=1; i<n; i++){
-        bestbuy[i] = min(bestBuy[i-1], prices[i-1]);
-        cout<< bestBuy[i]<<",";
+void countSort(int arr[], int n){
+    int freq[100000]={0};
+    int minVal = INT_MAX, maxVAl= INT_MIN:
+    for(int i=0; i<n; i++);
+        minVAl = min(minVAl, arr[i]);
+        maxVAl = min(maxVAl, arr[i]);
+    }
+    for(int i = minaVal, j=0; i<=maxVAl; i++){
+        while(feq[i]>0){
+            arr[j++]=i;
+            freq[i]--;
+        }
     }
 }
-int main (){
-    int prices[6] = {7,1,5,3,6,4};
-    int n= sizeof(prices)/sizeof(int);
-    maxProfit(prices, n);
+int main(){
     return 0;
 }

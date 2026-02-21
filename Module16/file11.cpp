@@ -1,15 +1,17 @@
 #include<iostream>
-#include<vector>
 using namespace std;
-int main(){
-    vector <vector<int>> matrix ={{1,2,3},{4,5},{6}};
-    for(int i=0; i<matrix.size(); i++){
-        for(int j=0; j<matrix[i].size(); j++){
-            for(int j=0; j<matrix[i].size(); j++){
-                cout<<matrix[i][j]<<" ";
-            }
-            cout<<endl;
-        }
-    }
+int getithbit(int num, int i){
+    int bitmask= 1 <<i;
+
+if(!(num & bitmask)){
     return 0;
+}else{
+    return 1;
+}
+}
+int main(){
+    cout<<getithbit(6,2)<<endl;
+    cout<<getithbit(7,2)<<endl;
+    return 0;
+
 }

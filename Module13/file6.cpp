@@ -1,19 +1,22 @@
-#include<iostream>
+#include<iostream>//diagonalsumfor3*3
 using namespace std;
-void countSort(int arr[], int n){
-    int freq[100000]={0};
-    int minVal = INT_MAX, maxVAl= INT_MIN:
-    for(int i=0; i<n; i++);
-        minVAl = min(minVAl, arr[i]);
-        maxVAl = min(maxVAl, arr[i]);
-    }
-    for(int i = minaVal, j=0; i<=maxVAl; i++){
-        while(feq[i]>0){
-            arr[j++]=i;
-            freq[i]--;
+bool search(int mat[][4], int n, int m, int key){
+    int i=0, j=m-1;//tc-0(n^2)
+    while(i<n && j>=0){
+        if(mat[i][j]==key){
+            cout<<"found at cell("<<i<<","<<j<<")\n";
+            return true;
+        }else if(mat[i][j]>key){
+            j--;
+        }else{
+            i++;
         }
     }
-}
+        cout<<"key not found\n";
+        return false;
+    }
 int main(){
+int matrix[4][4]={{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+  search(matrix, 4,4,33);
     return 0;
 }

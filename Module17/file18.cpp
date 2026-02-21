@@ -1,16 +1,36 @@
 #include<iostream>
+#include<string>
 using namespace std;
-int countsetbit(int num){
-    int count=0;
-    while(num>0){
-        int lastdig=num & 1;
-        count += lastdig;
-        num = num >> 1;
+class Animal{
+    public:
+    void eat(){
+        cout<<"eat"<<endl;
     }
-    cout << count <<endl;
-    return count;
+};
+class bird : public Animal {
+   public: 
+   void swim(){
+        cout<<"swim"<<endl;
 }
+};
+class fish : public Animal{
+    public:
+    void swim(){
+        cout<<"swim"<<endl;
+    }
+};
+class mammal : public Animal{
+    public:
+    void walk(){
+        cout<<"walk"<<endl;
+    }
+};
 int main(){
-    countsetbit(7);
+    bird f1;
+    fish f2;
+    mammal f3;
+    cout<<<<endl;
+    cout<< fish f2<<endl;
+    cout<<mammal f3<<endl;
     return 0;
 }

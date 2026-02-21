@@ -1,19 +1,20 @@
 #include<iostream>
 using namespace std;
-int maxSum;
-void maxSubarraySum1(int *arr, int n){
-    for(int start=0; start<n; start++){
-        int currSum=0;
-        for(int end=start; end<n; end++){
-          currSum += arr[end];
-         maxSum= max(maxSum, currSum);
+int i;
+void selectionSort(int arr[], int n){
+    for( i=0; i<n-1; i++){
+    int minIdx = i;
+    for(int j=i+1; j<n; j++){
+        if(arr[j]<arr[minIdx]){
+            minIdx=j;
         }
     }
-    cout<<"maximum subarray sum ="<<maxSum<<endl;
+    swap(arr[i],arr[minIdx]);  
+}
+   print(arr,n);
 }
 int main(){
-    int arr[6]={2,-3,6,-5,4,2};
-    int n = sizeof(arr)/sizeof(int);
-    maxSubarraySum1(arr,n);
+    int arr[5]={5,4,1,3,2};
+    selectionSort(arr,5);
     return 0;
 }

@@ -1,19 +1,13 @@
-#include <iostream>
+#include<iostream>//matrix2D vector
+#include<vector>
 using namespace std;
-void toUpper(char word[],int n){
-    for(int i=0; i<n; i++){
-        char ch=word[i];
-        if(ch>='A'&& ch<='Z'){
-            continue;
-        }else{
-            ch=ch-'a'+'A';
-        }
-    }
-}
 int main(){
-    char word[]="ApPle";
-    int strlen;
-    toUpper(word,strlen(word));
-    cout<<word<<endl;
+      vector<vector<int>> matrix={{1,2,3},{4,5,6},{7,8,9}};
+      for(int i=0; i<matrix.size(); i++){
+        for(int j=0; j<matrix[i].size(); j++){
+            cout<<matrix[i][j]<<" ";
+        }
+    cout<<endl;
+      }
     return 0;
 }

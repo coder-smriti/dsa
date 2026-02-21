@@ -1,18 +1,20 @@
-#include<iostream>
+#include<iostream>//diagonalsum
 using namespace std;
-void insertionSort(int arr[], int n){
-    for(int i=1; i<n; i++){
-        int curr = arr[i];
-        int prev = i-1;
-        while(prev >= 0 && arr[prev]>curr){
-            swap(arr[prev],arr[prev+1]);
-            prev--;
+int diagonalSum(int mat[][3],int n){
+    int sum=0;
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+      if(i==j){
+        sum += mat[i][j];
+      }else if(j==n-i-1){
+        sum += mat[i][j];
+      }
         }
-        arr[prev+1]=curr;
     }
-        cout<<(arr,n);
+    cout<<"sum= "<<sum<<endl;
 }
 int main(){
-   int arr[5]={5,4,1,3,2};
+int matrix[3][3]={{1,2,3},{4,5,6},{7,8,9}};
+   diagonalSum(matrix, 3);
     return 0;
 }

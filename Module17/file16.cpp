@@ -1,11 +1,34 @@
 #include<iostream>
+#include<string>
 using namespace std;
-void clearithbit(int num, int i){
-    int bitmask = (~0)<<i;
-    num = num & bitmask;
-    cout << num<< endl;
-}
+class Animal{
+    public:
+    string color;
+    void eat(){
+        cout<<"eats\n";
+    }
+    void breathe(){
+        cout<<"breaths\n";
+    }
+};
+class Mammal: public Animal{
+    public:
+    string bloodType = "warm";
+    Mammal(){
+        bloodType= "warm";
+    }
+};
+class Dog: public Mammal{
+    public:
+    void taiWag(){
+        cout<<"a dog wags its tail\n";
+    }
+};
 int main(){
-    clearithbit(7,2);
-    return 0;
+Dog d1;
+d1.eat();
+d1.breathe();
+d1.taiWag();
+cout<<d1.bloodType<<endl;
+return 0;
 }

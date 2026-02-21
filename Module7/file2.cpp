@@ -1,11 +1,14 @@
 #include<iostream>
 using namespace std;
-int sum(int a, int b){
-   int s=((a)+(b));
-   return s;
-}
-int main(){
-    int s=sum(2,4);//(how function is working.)
-    cout<<s<<endl;
+    void sayHello(){
+        cout<<"Hello:)\n";
+    }
+    void assistant(){
+        sayHello();
+        cout<<"Work done \n";
+    }
+
+    int main(){
+      assistant()  ;
     return 0;
 }
