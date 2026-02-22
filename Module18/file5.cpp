@@ -6,16 +6,24 @@ class Parent {
     void show(){
         cout<<"parent class show...\n";
     }
+    virtual void hello(){
+            cout<<"parent hello\n";
+        }
 };
 class Child : public Parent {
     public:
     void show(){
         cout<<"child class show..\n";
         }
+        void hello(){
+            cout<<"child hello\n";
+        }
 };
 int main(){
 
-    Child Child1;
-    Child1.show();
+    Parent parent1;
+    Parent *ptr;
+    ptr = &parent1;
+    ptr->hello();
     return 0;
 }
