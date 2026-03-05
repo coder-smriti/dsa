@@ -5,7 +5,6 @@ using namespace std;
 class Node{
     public:
     int data;
-    int data;
     Node* next;
     Node(int val){
         data=val;
@@ -52,6 +51,39 @@ class List{
         return false; 
     }
 };
+    void removeCyvle(Node* heead){
+        Node* slow=head;
+        Node* fast=head;
+        bool isCycle=false;
+        while(fast != NULL && fast->next !=NULL){
+            slow=slow->next;
+            fast=fast->next->next;
+            if(slow==fast){
+                cout<<"cycle exists\n";
+                isCycle = true;
+            }
+        }
+        if(!isCycle){
+            cout<<"cycle doesn't exists";
+            return ;
+        }
+       slow=head;
+       if(slow==fast) {//special case-tail->head
+          if(slow==fast){
+            while(fast->next!=slow){
+                fast = fast>next;
+            }
+            fast->next=NULL;
+       }else{
+        while(slow!=fast){
+            slow=slow->next;
+            prev=fast;
+            fast=fast->next;
+        }
+        prev->next=NULL;
+       }
+    }
+}
 int main(){
     List ll;
     ll.push_front(3);
@@ -61,5 +93,7 @@ int main(){
     ll.push_front(5);
     ll.tail->next=ll.head;
     isCycle(ll.head);
+    removeCycle(ll.head);
+    printList(ll.head);
     return 0;
 }
