@@ -10,7 +10,7 @@ class Node{
         data=val;
         next=NULL;
     }
-    }
+    };
 void push_back(int val){
     Node* newNode = new Node(val);
     if(head == NULL){
