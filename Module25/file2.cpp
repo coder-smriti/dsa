@@ -1,19 +1,20 @@
 #include<iostream>
 #include<string>
 #include<vector>
+using namespace std;
 class Node{
+    public:
     int data;
     Node* next;
-    public:
     Node(int val){
         data=val;
         next=NULL;
     }
 };
 class List{
+        public:
     Node* head;
     Node* tail;
-    public:
     List(){
         head=NULL;
         tail=NULL;
@@ -29,7 +30,7 @@ class List{
     }
 };
 int main(){
-    List ll();
+    List ll;
     ll.push_front(3);
     ll.push_front(2);
     ll.push_front(1);

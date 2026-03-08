@@ -57,6 +57,5 @@ int main(){
     ll.printList();
     ll.insert(100,2);
     ll.printList();
-   //1->2->3;
     return 0;
 }

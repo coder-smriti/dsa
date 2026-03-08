@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string>
 #include<vector>
+using namespace std;
 class Node{
     int data;
     Node* next;
@@ -11,15 +12,15 @@ class Node{
     }
 };
 class List{
+        public:
     Node* head;
     Node* tail;
-    public:
     List(){
         head=NULL;
         tail=NULL;
     }
 };
 int main(){
-    List ll();
+    List ll;
     return 0;
 }
